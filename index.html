@@ -1,0 +1,85 @@
+<html>
+
+<head>
+  <title>
+    Radio
+  </title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="pict">
+      <button id="playstop">
+        <img src="asset/play-48.png" class="play-stop play">
+        <audio src="https://radio.almuwasholah.com/radio/8000/stream.mp3" id="stream"> </audio>
+      </button>
+    </div>
+    <div>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
+
+<style>
+  #playstop {
+    margin: 1.55rem;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    /* border: none; */
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border-radius: 50%; */
+
+  }
+
+
+
+  #stream {
+    display: none;
+  }
+
+  .container div {
+    float: left;
+    clear: none;
+  }
+
+  .container {
+    background-color: lightseagreen;
+    width: 600px;
+    height: 100px;
+    border-radius: 1rem;
+    /* padding: .7rem; */
+    /* float: left; */
+    /* max-width: 100%; */
+  }
+
+  .pict {
+    /* background-image: url("asset/bg.png"); */
+    background-image: url("asset/bg.png"), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 120px 100px;
+
+    /* background-color: white; */
+    width: 120px;
+    height: 100px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .rad {
+    margin: 9px;
+  }
+</style>
