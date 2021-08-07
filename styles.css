@@ -1,0 +1,58 @@
+body {
+    background-image: url("asset/bodybg.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+#playstop {
+    margin: 2rem;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#stream {
+    display: none;
+}
+
+.container div {
+    float: left;
+    clear: none;
+}
+
+.container {
+    background-color: white;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    width: 500px;
+    height: 110px;
+    border-radius: .8rem;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+.pict {
+    background-image: url("asset/bg.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 130px 110px;
+    width: 130px;
+    height: 110px;
+    border-top-left-radius: .8rem;
+    border-bottom-left-radius: .8rem;
+}
+
+p {
+    font-family: Poppins, Helvetica, "sans-serif"
+}
+
+.info {
+    padding-left: .8em;
+}
