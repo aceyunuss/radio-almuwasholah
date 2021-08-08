@@ -1,0 +1,28 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<a href="#" title="Play video" class="play"></a>
+<h1>CSS3 Play/Pause button</h1>
+<span class="headline">click/touch the button to see the animation.</span>
+<a href="https://twitter.com/stevenfabre" title="Follow me on twitter" class="social">@stevenfabre</a>
+<a href="http://stevenfabre.com" title="Read my blog" class="social">stevenfabre.com</a>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
+  body {
+    background: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+  }
+
+  
+</style>
+
+<script>
+  $(document).ready(function() {
+  var icon = $('.play');
+  icon.click(function() {
+     icon.toggleClass('active');
+     return false;
+  });
+});
+</script>
