@@ -26,21 +26,29 @@ $(document).ready(function () {
 
   function getStream() {
     $.get("https://radio.almuwasholah.com/api/nowplaying/almuwasholah", function (data, status) {
-      let streamlink = data.station.listen_url
-      let playing = data.now_playing
-      let artist = playing.song.artist != "" ? playing.song.artist : "~"
-      let title = playing.song.title != "" ? playing.song.title : ""
 
-      $(".artist").text(artist)
-      $(".title").text(title)
-      $("#stream").prop("src", streamlink)
-      $(".pict").css('background-image', 'url("' + playing.song.art + '")');
-      
-      if (!$(".play-stop").hasClass('goPlay')) {
-        $audio.play()
+      if (data.is_online) {
+
+        let streamlink = data.station.listen_url
+        let playing = data.now_playing
+        let artist = playing.song.artist != "" ? playing.song.artist : "~"
+        let title = playing.song.title != "" ? playing.song.title : ""
+
+        $(".artist").text(artist)
+        $(".title").text(title)
+        $("#stream").prop("src", streamlink)
+        $(".pict").css('background-image', 'url("' + playing.song.art + '")');
+
+        if (!$(".play-stop").hasClass('goPlay')) {
+          $audio.play()
+        }
+
+        refreshText(playing.remaining * 1000)
+
+      } else {
+        alert("Sorry we are offline")
       }
 
-      refreshText(playing.remaining * 1000)
     });
   }
 
