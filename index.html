@@ -5,8 +5,10 @@
     Radio
   </title>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mada&family=Rajdhani&display=swap" rel="stylesheet">
   <script src="script.js"></script>
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +16,29 @@
 
 <body>
   <div class="container">
-    <div class="pict">
-      <button id="playstop">
-      <!-- <a href="#" title="Play video" class="play-stop play"></a> -->
 
-        <img src="asset/play-48.png" class="play-stop play">
-        <audio src="https://radio.almuwasholah.com/radio/8000/stream.mp3" id="stream"> </audio>
-      </button>
+    <div class="pict">
     </div>
+
+    <p class="text radioname">Radio On-air Al Muwasholah</p>
+    <br>
+
+    <div class="act">
+      <!-- <button id="playstop"> -->
+      <!-- <img src="asset/play-48.png" class="play-stop play"> -->
+      <audio src="https://radio.almuwasholah.com/radio/8000/stream.mp3" id="stream"> </audio>
+      <!-- </button> -->
+      <a href="#" title="Play video" class="play-stop play goPlay"></a>
+    </div>
+
     <div class="info">
-      <h2 class="text title">~</h2>
+
+      <p class="text title">~</p>
       <p class="text artist"></p>
       <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
     </div>
+
+
 
   </div>
 

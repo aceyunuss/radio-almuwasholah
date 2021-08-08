@@ -5,14 +5,14 @@ $(document).ready(function () {
 
   $('.play-stop').click(function () {
     if (!$(this).hasClass('play')) {
-      $(this).attr('src', 'asset/play-48.png');
-      $(this).addClass('play')
+      // $(this).attr('src', 'asset/play-48.png');
+      $(this).addClass('goPlay')
       $audio.pause()
       $("#stream").prop("src", "none")
       // $('.cycle-slideshow').cycle('stop');
     } else {
-      $(this).attr('src', 'asset/stop-48.png');
-      $(this).removeClass('play')
+      // $(this).attr('src', 'asset/stop-48.png');
+      $(this).removeClass('goPlay')
       getStream("play")
       // $('.cycle-slideshow').cycle('resume');
     }
@@ -38,6 +38,7 @@ $(document).ready(function () {
       $(".artist").text(artist)
       $(".title").text(title)
       $("#stream").prop("src", streamlink)
+      $(".pict").css('background-image', 'url("' + playing.song.art + '")');
 
       // if (type == "play") {
       // }
@@ -53,5 +54,11 @@ $(document).ready(function () {
       getStream("refreshtext");
     }, time);
   }
+
+  var icon = $('.play');
+  icon.click(function () {
+    icon.toggleClass('active');
+    return false;
+  });
 
 });
