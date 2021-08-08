@@ -1,5 +1,5 @@
 body {
-    background-image: url("asset/bodybg.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-image: url("asset/bodybg.png"), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
