@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  
+
   $audio = $("#stream")[0]
-  getStream();
+  getStream("play");
 
   $('.play-stop').click(function () {
     if (!$(this).hasClass('play')) {
@@ -13,7 +13,7 @@ $(document).ready(function () {
     } else {
       $(this).attr('src', 'asset/stop-48.png');
       $(this).removeClass('play')
-      getStream()
+      getStream("play")
       // $('.cycle-slideshow').cycle('resume');
     }
   });
@@ -28,7 +28,7 @@ $(document).ready(function () {
   }
 
 
-  function getStream() {
+  function getStream(type) {
     $.get("https://radio.almuwasholah.com/api/nowplaying/almuwasholah", function (data, status) {
       let streamlink = data.station.listen_url
       let playing = data.now_playing
@@ -38,7 +38,20 @@ $(document).ready(function () {
       $(".artist").text(artist)
       $(".title").text(title)
       $("#stream").prop("src", streamlink)
+
+      // if (type == "play") {
+      // }
       $audio.play()
+
+      refreshText(playing.remaining * 1000)
     });
   }
+
+
+  function refreshText(time) {
+    setTimeout(() => {
+      getStream("refreshtext");
+    }, time);
+  }
+
 });
