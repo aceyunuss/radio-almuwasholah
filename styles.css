@@ -7,6 +7,32 @@ body {
     background-position: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .bg {
+        width: 100%;
+    }
+}
+
+.contaibgner {
+    position: relative;
+    line-height: 100px;
+}
+
+.bg>.fi, .bg>.fi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    z-index: 0;
+}
+
+.bg>*:not(.fi) {
+    position: relative;
+    z-index: 1;
+}
+
 #playstop {
     /* margin: 1.5rem; */
     /* background-color: Transparent; */
@@ -153,7 +179,7 @@ body {
 input[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
-    width: 120px;
+    width: 80px;
 }
 
 input[type=range]:focus {
